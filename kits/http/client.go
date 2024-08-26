@@ -1,4 +1,4 @@
-package httpkit
+package httputils
 
 import (
 	"net/http"

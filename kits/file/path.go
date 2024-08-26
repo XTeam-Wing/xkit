@@ -1,4 +1,4 @@
-package filekit
+package file
 
 import "os"
 
