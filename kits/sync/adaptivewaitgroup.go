@@ -1,4 +1,4 @@
-package sync
+package syncutil
 
 // Extended version of https://github.com/remeh/sizedwaitgroup
 
