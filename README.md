@@ -16,3 +16,8 @@ Use `go get` to install xkit:
 ```bash
 go get -u github.com/XTeam-Wing/xkit
 ```
+
+## reference
+
+- https://github.com/zema1/watchvuln
+- https://github.com/projectdiscovery/utils
