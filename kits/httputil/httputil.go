@@ -66,3 +66,13 @@ func DumpResponseHeadersAndRaw(resp *http.Response) (headers, fullresp []byte, e
 	resp.Body = io.NopCloser(bytes.NewReader(buf1.Bytes()))
 	return
 }
+
+// CheckHTTPAlive 检查HTTP存活性
+func CheckHTTPAlive(url string) bool {
+	resp, err := http.Head(url)
+	if err != nil {
+		return false
+	}
+	defer resp.Body.Close()
+	return true
+}
