@@ -3,7 +3,7 @@ package sizedpool
 import (
 	"context"
 	"errors"
-	"github.com/XTeam-Wing/xkit/kits/sync/semaphore"
+	"github.com/XTeam-Wing/xkit/kits/syncutil/semaphore"
 	"sync"
 )
 
