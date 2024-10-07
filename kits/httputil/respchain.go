@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	sizedpool "github.com/XTeam-Wing/xkit/kits/sync/sizepool"
+	"github.com/XTeam-Wing/xkit/kits/syncutil/sizepool"
 	"net/http"
 	"sync"
 )
