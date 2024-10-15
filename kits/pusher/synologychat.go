@@ -39,8 +39,6 @@ func (m *SynologyChat) PushText(s string) error {
 		return err
 	}
 	postData := fmt.Sprintf("payload=%s", payload)
-	// 忽略ssl
-	m.client.TLSClientConfig.InsecureSkipVerify = true
 	_, err = m.client.R().SetHeader("Content-Type", "application/x-www-form-urlencoded").SetBody(postData).Post(m.url)
 	if err != nil {
 		return err

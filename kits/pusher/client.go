@@ -2,6 +2,7 @@ package push
 
 import (
 	"context"
+	"crypto/tls"
 	"errors"
 	"github.com/imroc/req/v3"
 	"time"
@@ -9,8 +10,13 @@ import (
 
 func NewHttpClient() *req.Client {
 	client := req.C()
+	customTransport := &tls.Config{
+		InsecureSkipVerify: true, // 忽略 SSL 证书验证
+	}
+
 	client.
 		ImpersonateChrome().
+		SetTLSClientConfig(customTransport).
 		SetTimeout(10 * time.Second).
 		SetCommonRetryCount(3).
 		SetCookieJar(nil).
